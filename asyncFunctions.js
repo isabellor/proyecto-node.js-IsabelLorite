@@ -1,6 +1,6 @@
 const URL= "https://fakestoreapi.com/products";
-//funcion para GET products
-export async function getProducts() {
+//funcion para GET productos
+export async function getProductos() {
     try {
         const response= await fetch(URL)
         const data = await response.json()
@@ -14,8 +14,8 @@ export async function getProducts() {
 }
 
 
-//funcion para GET products/id
-export async function getProductsById(id) {
+//funcion para GET productos/id
+export async function getProductosById(id) {
     try {
         const response= await fetch(`${URL}/${id}`)
         const data = await response.json()
@@ -29,8 +29,8 @@ export async function getProductsById(id) {
 }
 
 
-//funcion para POST products
-export async function postProducts(producto) {
+//funcion para POST productos
+export async function postProductos(producto) {
     try {
         const response= await fetch(URL,{
             method: 'POST', 
@@ -49,7 +49,7 @@ export async function postProducts(producto) {
     console.log("Petición finalizada");
   }
 }
-postProducts( {
+postProductos( {
     title: 'test product',
     price: 13.5,     
     description: 'lorem ipsum set',
@@ -59,7 +59,7 @@ postProducts( {
 
 //funcion para DELETE
 
-export async function deleteProducts(id) {
+export async function deleteProductos(id) {
     try {
         const response= await fetch(`${URL}/${id}`,{
             method: 'DELETE', 
